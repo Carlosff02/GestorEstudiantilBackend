@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:postgresql://ep-dark-mouse-acpj2hi7-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_xLm1hgf8sFzG
+    driver-class-name: org.postgresql.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: soporte@jachperu.pe
+    password: lhwf drjy wnil ohzw
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    # HikariCP connection pool settings (default in Spring Boot)
+    hikari:
+      maximum-pool-size: 10       # Max number of connections in the pool
+      minimum-idle: 2             # Minimum idle connections
+      idle-timeout: 30000         # 30 seconds before idle connections are removed
+      max-lifetime: 1800000       # 30 minutes max connection lifetime
+      connection-timeout: 20000   # 20 seconds max wait for a connection
+
+
+
+# Optional: Logging configuration
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+application:
+  name: studysinc
+  version: 1.2.0
+  security:
+    jwt:
+      secret-key: ccea1cead3c25a065eb36b69a83d5d2dcd770997ac6cdd1c3870f111ff67ed95
+      expiration: 86400000
+      refresh-token:
+        expiration: 172800000

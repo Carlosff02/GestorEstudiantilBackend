@@ -1,0 +1,2 @@
+ALTER TABLE tareas_proyecto
+DROP CONSTRAINT tareas_proyecto_estado_check;

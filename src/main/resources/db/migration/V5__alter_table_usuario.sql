@@ -1,0 +1,2 @@
+ALTER TABLE usuarios
+ADD COLUMN idioma VARCHAR(10) DEFAULT 'es';

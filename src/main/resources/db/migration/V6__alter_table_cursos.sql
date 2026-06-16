@@ -1,0 +1,1 @@
+ALTER TABLE cursos ADD COLUMN docente VARCHAR(125);

@@ -1,0 +1,1 @@
+ALTER TABLE proyectos ADD COLUMN usuario_id INTEGER REFERENCES usuarios(id_usuario);
